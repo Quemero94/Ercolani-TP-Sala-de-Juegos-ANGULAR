@@ -1,9 +1,21 @@
 <app-cabecera> </app-cabecera>
-
-
-
-
 <div class="container">
+    <div class="card-deck">
+        <div class="card" *ngFor="let menu of mPrincipal">
+            <img src="{{ menu.img }}" class="card-img-top" alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">{{ menu.nombre }}</h5>
+                <p class="card-text">
+                    {{ menu.descripcion }}
+                </p>
+                <button type="button" class="btn btn-outline-primary btn-block">
+          Ver más...
+        </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="container">
 
     <ul class="list-group">
         <li class="list-group-item list-group-item-danger">
@@ -76,6 +88,6 @@
 
 
     </ul>
-</div>
+</div> -->
 
 <app-footer></app-footer>

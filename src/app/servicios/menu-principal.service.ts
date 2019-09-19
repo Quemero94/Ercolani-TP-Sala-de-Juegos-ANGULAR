@@ -10,13 +10,13 @@ export class MenuPrincipalService {
         "El método lúdico es un conjunto de estrategias diseñadas para crear un ambiente de armonía en los estudiantes que están inmersos en el proceso de aprendizaje. Este método busca que los alumnos se apropien de los temas impartidos por los docentes utilizando el juego."
     },
     {
-      img: "./assets/imagenes/listado.jpg",
+      img: "./assets/imagenes/listado.png",
       nombre: "Listados de resultados",
       descripcion: "Los listados de los resultados con ordenamiento y busqueda"
     },
     {
       img: "./assets/imagenes/Configuracion.png",
-      nombre: "Configuraci&oacute;n",
+      nombre: "Configuración",
       descripcion: "Ajustes de la aplicacion y los métodos de autentificación"
     },
     {

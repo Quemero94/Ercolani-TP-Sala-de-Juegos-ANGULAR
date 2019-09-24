@@ -1,94 +1,45 @@
 <app-cabecera> </app-cabecera>
 
-<div class="container main-paddin">
-    <div class="card-deck ">
-        <div class="card text-white bg-dark" *ngFor="let menu of mPrincipal">
-            <img src="{{ menu.img }}" class="card-img-top" alt="..." />
-            <div class="card-body">
-                <h5 class="card-title">{{ menu.nombre }}</h5>
-                <p class="card-text">
-                    {{ menu.descripcion }}
-                </p>
+
+<main role="main">
+
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Bienvenidos a MINIJUEGOS</h1>
+            <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+            <p>
+                <a href="#" class="btn btn-primary my-2">Main call to action</a>
+                <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+            </p>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let menu of mPrincipal">
+                    <div class="card mb-4 box-shadow ">
+                        <img class="card-img-top" src="{{ menu.img }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ menu.nombre }}</h5>
+                            <div class=" d-md-block">
+                                <p class="card-text block-ellipsis">{{ menu.descripcion }}</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <button type="button" routerLink="{{menu.link}}" class="btn btn-block btn-warning">
+                  Ver más...
+                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button type="button" style="margin: 5px " class="btn btn-outline-warning">
-        Ver más...
-      </button>
         </div>
     </div>
-</div>
-<!-- <div class="container">
 
-    <ul class="list-group">
-        <li class="list-group-item list-group-item-danger">
+</main>
 
-            <div class="media-body">
-                <div class="hero-text">
-                    <h4>Menú Principal</h4>
-                </div>
-            </div>
-
-
-        </li>
-        <li class="list-group-item list-group-item-success">
-            <a routerLink="/Juegos">
-                <div class="media">
-                    <div class="media-left">
-                        <img src="./assets/imagenes/saladejuegos.png" class="media-object imagenDeMenu">
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading">Juegos</h4>
-                        <p>El método lúdico es un conjunto de estrategias diseñadas para crear un ambiente de armonía en los estudiantes que están inmersos en el proceso de aprendizaje. Este método busca que los alumnos se apropien de los temas impartidos
-                            por los docentes utilizando el juego.</p>
-                    </div>
-
-                </div>
-            </a>
-        </li>
-        <li class="list-group-item list-group-item-info">
-            <a routerLink="/Listado">
-                <div class="media">
-                    <div class="media-left">
-                        <img src="./assets/imagenes/listado.jpg" class="media-object imagenDeMenu">
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading">Listados de resultados</h4>
-                        <p>Los listados de los resultados con ordenamiento y busqueda</p>
-                    </div>
-
-                </div>
-            </a>
-        </li>
-        <li class="list-group-item list-group-item-warning">
-            <a routerLink="/Juegos">
-                <div class="media">
-                    <div class="media-left">
-                        <img src="./assets/imagenes/Configuracion.png" class="media-object imagenDeMenu">
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading">Configuraci&oacute;n</h4>
-                        <p>Ajustes de la aplicacion y los métodos de autentificación</p>
-                    </div>
-
-                </div>
-            </a>
-        </li>
-        <li class="list-group-item list-group-item-warning">
-            <a routerLink="/Jugadores">
-                <div class="media">
-                    <div class="media-left">
-                        <img src="./assets/imagenes/jugadores.png" class="media-object imagenDeMenu">
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading">Jugadores</h4>
-                        <p>Listado de jugadores</p>
-                    </div>
-
-                </div>
-            </a>
-        </li>
-
-
-    </ul>
-</div> -->
 
 <app-footer></app-footer>

@@ -1,5 +1,5 @@
-# TP-Sala-de-Juegos-ANGULAR-
+# Ercolani-TP-Sala-de-Juegos-ANGULAR-
+
 Trabajo práctico obligatorio para la promoción directa
 
-# https://octaviovillegas.github.io/TP-Sala-de-Juegos-ANGULAR-/.
-
+# https://quemero94.github.io/Ercolani-TP-Sala-de-Juegos-ANGULAR/

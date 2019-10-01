@@ -1,9 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { Router, ActivatedRoute, ParamMap } from "@angular/router";
-//para poder hacer las validaciones
-//import { Validators, FormBuilder, FormControl, FormGroup} from '@angular/forms';
 import { UsuarioModel } from "../../models/usuario.model";
 import { NgForm } from "@angular/forms";
+import { AuthService } from "../../servicios/auth.service";
+
 @Component({
   selector: "app-registro",
   templateUrl: "./registro.component.html",
@@ -17,7 +16,7 @@ export class RegistroComponent implements OnInit {
   });*/
 
   usuario: UsuarioModel;
-  constructor() {}
+  constructor(private auth: AuthService) {}
 
   ngOnInit() {
     this.usuario = new UsuarioModel();
@@ -28,8 +27,13 @@ export class RegistroComponent implements OnInit {
       return;
     }
 
-    console.log("Formulario enviado");
-    console.log(this.usuario);
-    console.log(form);
+    this.auth.nuevoUsuario(this.usuario).subscribe(
+      resp => {
+        console.log(resp);
+      },
+      err => {
+        console.log(err.error.error.message);
+      }
+    );
   }
 }

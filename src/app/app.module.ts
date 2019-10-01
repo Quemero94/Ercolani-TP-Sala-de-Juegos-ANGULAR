@@ -91,10 +91,10 @@ import { FooterComponent } from "./componentes/footer/footer.component";
     FormsModule,
     RuteandoModule,
     HttpModule,
-    HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys"
-    })
+    }),
+    HttpClientModule
     // NgbModule.forRoot(MiRuteo),
     // importo el ruteo
     // RouterModule.forRoot(MiRuteo)

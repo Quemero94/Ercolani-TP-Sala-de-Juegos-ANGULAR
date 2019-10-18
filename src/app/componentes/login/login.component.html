@@ -34,7 +34,8 @@
         <input type="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="usuario.password" minlength="6" required>
         <div class="checkbox mb-3">
             <label>
-        <input type="checkbox" value="remember-me"> Recuedame
+        <input [(ngModel)]="recordarme" id="recordarme" name="recordarme" type="checkbox" value="remember-me">
+        Recordarme
       </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>

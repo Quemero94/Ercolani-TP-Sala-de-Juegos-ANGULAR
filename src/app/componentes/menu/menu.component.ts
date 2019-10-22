@@ -1,34 +1,40 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { Router, ActivatedRoute, ParamMap } from "@angular/router";
+import { AuthService } from "../../servicios/auth.service";
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  selector: "app-menu",
+  templateUrl: "./menu.component.html",
+  styleUrls: ["./menu.component.css"]
 })
 export class MenuComponent implements OnInit {
+  constructor(
+    private auth: AuthService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
-  constructor(private route: ActivatedRoute,
-    private router: Router) { }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   Juego(tipo: string) {
     switch (tipo) {
-      case 'Adivina':
-          this.router.navigate(['/Juegos/Adivina']);
+      case "Adivina":
+        this.router.navigate(["/Juegos/Adivina"]);
         break;
-      case 'Agilidad':
-          this.router.navigate(['/Juegos/Agilidad']);
+      case "Agilidad":
+        this.router.navigate(["/Juegos/Agilidad"]);
         break;
-      case 'AdivinaMasListado':
-          this.router.navigate(['/Juegos/AdivinaMasListado']);
+      case "AdivinaMasListado":
+        this.router.navigate(["/Juegos/AdivinaMasListado"]);
         break;
-      case 'AgilidadaMasListado':
-          this.router.navigate(['/Juegos/AgilidadaMasListado']);
+      case "AgilidadaMasListado":
+        this.router.navigate(["/Juegos/AgilidadaMasListado"]);
         break;
     }
   }
 
+  salir() {
+    this.auth.logout();
+    this.router.navigateByUrl("/Login");
+  }
 }
